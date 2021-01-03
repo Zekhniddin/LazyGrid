@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		082BA99625A1EA7900F4CC81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA99525A1EA7900F4CC81 /* AppDelegate.swift */; };
 		082BA99825A1EA7900F4CC81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA99725A1EA7900F4CC81 /* SceneDelegate.swift */; };
-		082BA99A25A1EA7A00F4CC81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA99925A1EA7A00F4CC81 /* ContentView.swift */; };
 		082BA99D25A1EA7A00F4CC81 /* LazyGrid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 082BA99B25A1EA7A00F4CC81 /* LazyGrid.xcdatamodeld */; };
 		082BA99F25A1EA7B00F4CC81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082BA99E25A1EA7B00F4CC81 /* Assets.xcassets */; };
 		082BA9A225A1EA7B00F4CC81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082BA9A125A1EA7B00F4CC81 /* Preview Assets.xcassets */; };
 		082BA9A525A1EA7B00F4CC81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082BA9A325A1EA7B00F4CC81 /* LaunchScreen.storyboard */; };
 		082BA9B025A1EA7B00F4CC81 /* LazyGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA9AF25A1EA7B00F4CC81 /* LazyGridTests.swift */; };
 		082BA9BB25A1EA7B00F4CC81 /* LazyGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA9BA25A1EA7B00F4CC81 /* LazyGridUITests.swift */; };
+		082BA9CE25A1EB2900F4CC81 /* LazyVGridScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BA9CD25A1EB2900F4CC81 /* LazyVGridScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		082BA99225A1EA7900F4CC81 /* LazyGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		082BA99525A1EA7900F4CC81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		082BA99725A1EA7900F4CC81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		082BA99925A1EA7A00F4CC81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		082BA99C25A1EA7A00F4CC81 /* LazyGrid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyGrid.xcdatamodel; sourceTree = "<group>"; };
 		082BA99E25A1EA7B00F4CC81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		082BA9A125A1EA7B00F4CC81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		082BA9B625A1EA7B00F4CC81 /* LazyGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082BA9BA25A1EA7B00F4CC81 /* LazyGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGridUITests.swift; sourceTree = "<group>"; };
 		082BA9BC25A1EA7B00F4CC81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		082BA9CD25A1EB2900F4CC81 /* LazyVGridScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +101,11 @@
 		082BA99425A1EA7900F4CC81 /* LazyGrid */ = {
 			isa = PBXGroup;
 			children = (
+				082BA9CC25A1EAF100F4CC81 /* screens */,
+				082BA9CB25A1EAEA00F4CC81 /* apputils */,
 				082BA99525A1EA7900F4CC81 /* AppDelegate.swift */,
 				082BA99725A1EA7900F4CC81 /* SceneDelegate.swift */,
-				082BA99925A1EA7A00F4CC81 /* ContentView.swift */,
-				082BA99E25A1EA7B00F4CC81 /* Assets.xcassets */,
-				082BA9A325A1EA7B00F4CC81 /* LaunchScreen.storyboard */,
 				082BA9A625A1EA7B00F4CC81 /* Info.plist */,
-				082BA99B25A1EA7A00F4CC81 /* LazyGrid.xcdatamodeld */,
 				082BA9A025A1EA7B00F4CC81 /* Preview Content */,
 			);
 			path = LazyGrid;
@@ -137,6 +135,24 @@
 				082BA9BC25A1EA7B00F4CC81 /* Info.plist */,
 			);
 			path = LazyGridUITests;
+			sourceTree = "<group>";
+		};
+		082BA9CB25A1EAEA00F4CC81 /* apputils */ = {
+			isa = PBXGroup;
+			children = (
+				082BA9A325A1EA7B00F4CC81 /* LaunchScreen.storyboard */,
+				082BA99B25A1EA7A00F4CC81 /* LazyGrid.xcdatamodeld */,
+				082BA99E25A1EA7B00F4CC81 /* Assets.xcassets */,
+			);
+			path = apputils;
+			sourceTree = "<group>";
+		};
+		082BA9CC25A1EAF100F4CC81 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				082BA9CD25A1EB2900F4CC81 /* LazyVGridScreen.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082BA9CE25A1EB2900F4CC81 /* LazyVGridScreen.swift in Sources */,
 				082BA99625A1EA7900F4CC81 /* AppDelegate.swift in Sources */,
 				082BA99825A1EA7900F4CC81 /* SceneDelegate.swift in Sources */,
-				082BA99A25A1EA7A00F4CC81 /* ContentView.swift in Sources */,
 				082BA99D25A1EA7A00F4CC81 /* LazyGrid.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
